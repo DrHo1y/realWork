@@ -4,7 +4,7 @@ import { Slider, Slide, Caption } from 'react-materialize'
 export const MySlider = () => {
     return (
         <Slider
-            fullscreen={true}
+            fullscreen={false}
             options={{
                 duration: 500,
                 height: 800,

@@ -5,6 +5,7 @@ import { useRoutes } from './routes';
 import { useAuth } from './hook/auth.hook';
 import { AuthContext } from './context/AuthContext';
 import { NavBar } from './components/Navbar';
+import { NavBarNoreg } from './components/NavbarNoreg';
 
 function App() {
   const { token, login, logout, userId } = useAuth()
@@ -16,6 +17,7 @@ function App() {
     }}>
       <Router>
         {isAuthenticated && <NavBar/>}
+        {!isAuthenticated && <NavBarNoreg/>}
         <div className="container">
           {routes}
         </div>

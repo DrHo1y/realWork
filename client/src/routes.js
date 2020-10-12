@@ -30,8 +30,11 @@ export const useRoutes = isAuthenticated => {
 
     return (
         <Switch>
-            <Route path="/" exact>
+            <Route path="/reg" exact>
                 <AuthPage />
+            </Route>
+            <Route path="/" exact>
+                    <MySlider />
             </Route>
             <Redirect to="/" />
         </Switch>
