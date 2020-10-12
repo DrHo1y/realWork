@@ -4,6 +4,7 @@ import { AuthPage } from './pages/AuthPage'
 import { CreatePage } from './pages/CreatePage'
 import { DetailPage } from './pages/DetailPage'
 import { LinksPage } from './pages/LinksPage'
+import { MySlider } from './pages/MySlider'
 
 export const useRoutes = isAuthenticated => {
 
@@ -19,7 +20,10 @@ export const useRoutes = isAuthenticated => {
                 <Route path="/detail/:id">
                     <DetailPage />  
                 </Route>
-                <Redirect to="/create" />
+                <Route path="/main" exact>
+                    <MySlider />
+                </Route>
+                <Redirect to="/main" />
             </Switch>
         )
     }

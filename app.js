@@ -1,8 +1,6 @@
-const e = require('express')
 const express = require('express')
 const config = require('config')
 const mongoose = require('mongoose')
-const c = require('config')
 
 const app = express()
 
@@ -21,12 +19,9 @@ async function start() {
         })
         app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
     } catch (e) {
-        console.log('Server error..',e.message)
+        console.log('Server error..', e.message)
         process.exit(1)
     }
 }
 
-
 start()
-
-

@@ -31,6 +31,7 @@ export const NavBar = () => {
                 preventScrolling: true
             }}
         >
+            <li><NavLink to="/main">Главная</NavLink></li>
             <li><NavLink to="/create">Создать</NavLink></li>
             <li><NavLink to="/links">Ссылки</NavLink></li>
             <li><a href="/" onClick={logoutHandler}>Выйти</a></li>
